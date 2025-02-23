@@ -1,5 +1,4 @@
 #pragma once
-#define _CRT_SECURE_NO_WARNINGS
 #include <assert.h>
 #include <iostream>
 #include <string.h>
@@ -11,60 +10,60 @@ public:
 	const static size_t npos = -1;
 	typedef char* iterator;
 	typedef const char* const_iterator;
-	// ¹¹Ôìº¯Êı£º¸ù¾İ C ×Ö·û´®³õÊ¼»¯
+	// æ„é€ å‡½æ•°ï¼šæ ¹æ® C å­—ç¬¦ä¸²åˆå§‹åŒ–
 	String(const char* str = "");
 
-	// ¿½±´¹¹Ôìº¯Êı
+	// æ‹·è´æ„é€ å‡½æ•°
 	String(const String& rhs);
 
-	// ¸³Öµ²Ù×÷·ûÖØÔØ
+	// èµ‹å€¼æ“ä½œç¬¦é‡è½½
 	String& operator=(const String& rhs);
 
-	// ÖØĞÂ·ÖÅäÄÚ´æ
+	// é‡æ–°åˆ†é…å†…å­˜
 	void reserve(size_t new_capacity);
 
-	// ×·¼Ó×Ö·û
+	// è¿½åŠ å­—ç¬¦
 	void push_back(char ch);
 
-	// ×·¼Ó×Ö·û´®
+	// è¿½åŠ å­—ç¬¦ä¸²
 	void append(const char* str);
 
-	// ÖØÔØ+=ÔËËã·û
+	// é‡è½½+=è¿ç®—ç¬¦
 	String& operator+=(char ch);
 	String& operator+=(const char* str);
 
-	// ²åÈëº¯Êı
+	// æ’å…¥å‡½æ•°
 	String& insert(size_t pos, char ch);
 	String& insert(size_t pos, const char* str);
 
-	// É¾³ıº¯Êı
+	// åˆ é™¤å‡½æ•°
 	String& erase(size_t pos, size_t len = npos);
 
-	//µ÷Õû×Ö·û´®´óĞ¡
+	//è°ƒæ•´å­—ç¬¦ä¸²å¤§å°
 	void resize(size_t new_size, char ch = '\0');
 
-	// ²éÕÒº¯Êı
+	// æŸ¥æ‰¾å‡½æ•°
 	size_t find(char ch, size_t pos = 0)const;
 	size_t find(const char* str, size_t pos = 0)const;
 
-	// ÖØÔØ[]ÔËËã·û
+	// é‡è½½[]è¿ç®—ç¬¦
 	char& operator[](size_t i);
 	const char& operator[](size_t i)const;
 
-	// Îö¹¹º¯Êı
+	// ææ„å‡½æ•°
 	~String();
 
-	// ·µ»Ø C ×Ö·û´®
+	// è¿”å› C å­—ç¬¦ä¸²
 	const char* c_str()const;
 
-	// µü´úÆ÷
+	// è¿­ä»£å™¨
 	iterator begin();
 	const_iterator begin()const;
 
 	iterator end();
 	const_iterator end()const;
 
-	// ´óĞ¡Ïà¹Ø
+	// å¤§å°ç›¸å…³
 	size_t Size()const;
 	size_t length()const;
 	size_t Capacity()const;
