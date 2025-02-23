@@ -1,2 +1,3 @@
 # STL
-Simulated Implementation of STL
+欢迎来到 **STL 模拟实现** 项目！这个仓库展示了如何从头开始模拟实现 C++ 标准模板库 (STL) 的一些基础功能和容器类，更好地理解 STL 的设计与实现原理。
+
